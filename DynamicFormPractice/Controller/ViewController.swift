@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, createFormDetailsPassed {
     
-
+    
     var addComponentButton : UIButton!
     var saveForm           : UIButton!
     var formTableView      : UITableView!
@@ -20,7 +20,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .systemGray
         loadPage()
         
     }
@@ -29,14 +29,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         addComponentButton = UIButton()
         addComponentButton.translatesAutoresizingMaskIntoConstraints = false
         addComponentButton.setTitle("Add Component", for: .normal)
-        addComponentButton.backgroundColor = .green
+        addComponentButton.backgroundColor = .black
         addComponentButton.addTarget(self, action: #selector(addComponentClick), for: .touchUpInside)
         view.addSubview(addComponentButton)
         
         NSLayoutConstraint.activate([
             addComponentButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
             addComponentButton.heightAnchor.constraint(equalToConstant: 50),
-            addComponentButton.widthAnchor.constraint(equalToConstant: 100),
+            addComponentButton.widthAnchor.constraint(equalToConstant: 150),
             addComponentButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
         
@@ -44,18 +44,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         saveForm.translatesAutoresizingMaskIntoConstraints = false
         saveForm.setTitle("Save", for: .normal)
         saveForm.backgroundColor = .green
+        saveForm.addTarget(self, action: #selector(saveFormClick), for: .touchUpInside)
         view.addSubview(saveForm)
         
         NSLayoutConstraint.activate([
-           saveForm.topAnchor.constraint(equalTo: addComponentButton.bottomAnchor, constant: 20),
-           saveForm.heightAnchor.constraint(equalToConstant: 50),
-           saveForm.widthAnchor.constraint(equalToConstant: 100),
-           saveForm.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            saveForm.topAnchor.constraint(equalTo: addComponentButton.bottomAnchor, constant: 20),
+            saveForm.heightAnchor.constraint(equalToConstant: 50),
+            saveForm.widthAnchor.constraint(equalToConstant: 100),
+            saveForm.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
         
         formTableView = UITableView()
         formTableView.translatesAutoresizingMaskIntoConstraints = false
-        formTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        formTableView.register(FormTableViewCell.self, forCellReuseIdentifier: "cell")
         formTableView.delegate = self
         formTableView.dataSource = self
         view.addSubview(formTableView)
@@ -67,6 +68,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             formTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
         
+    }
+    
+    @objc func addComponentClick(){
+        let vc = CreateFormViewController()
+        vc.delegate = self
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func saveFormClick(){
+        let dv = DisplayFormViewController()
+        //        delegate.passDetailArray(labelArr: labelArray, typeArr: typeArray)
+        dv.labelArray = labelArray
+        dv.typeArray = typeArray
+        self.navigationController?.pushViewController(dv, animated: true)
     }
     
     //MARK: createFormDetailsPassed Delegate
@@ -82,9 +97,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = formTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = labelArray[indexPath.row]
-        cell.detailTextLabel?.text = typeArray[indexPath.row]
+        
+        let cell = formTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FormTableViewCell
+        cell.label.text = labelArray[indexPath.row]
+        cell.type.text = typeArray[indexPath.row]
+        
         return cell
         
     }
@@ -92,14 +109,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
-  
-    @objc func addComponentClick(){
-        let vc = CreateFormViewController()
-        vc.delegate = self
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
     
-
-
+    
+    
+    
+    
 }
 

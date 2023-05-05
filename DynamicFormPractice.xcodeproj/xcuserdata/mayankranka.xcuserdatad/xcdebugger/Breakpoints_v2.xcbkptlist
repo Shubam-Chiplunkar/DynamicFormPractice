@@ -3,4 +3,54 @@
    uuid = "32C2209B-5C4C-41B2-A1E5-7625766C60D0"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "897011EC-6D9E-4BE1-98C4-FB44C1103839"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DynamicFormPractice/View/ViewForImage.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "loadView()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "897011EC-6D9E-4BE1-98C4-FB44C1103839 - 73764a6119ff801"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DynamicFormPractice.ViewForImage.loadView() -&gt; ()"
+                  moduleName = "DynamicFormPractice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mayankranka/Desktop/DynamicFormPractice/DynamicFormPractice/View/ViewForImage.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "2671">
+               </Location>
+               <Location
+                  uuid = "897011EC-6D9E-4BE1-98C4-FB44C1103839 - 73764a6119ff860"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DynamicFormPractice.ViewForImage.loadView() -&gt; ()"
+                  moduleName = "DynamicFormPractice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mayankranka/Desktop/DynamicFormPractice/DynamicFormPractice/View/ViewForImage.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "2671">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

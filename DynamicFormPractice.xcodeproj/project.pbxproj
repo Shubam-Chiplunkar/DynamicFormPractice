@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A0651E402A04B862009FAAEB /* FormTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0651E3F2A04B862009FAAEB /* FormTableViewCell.swift */; };
+		A0651E452A04C161009FAAEB /* DisplayFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0651E442A04C161009FAAEB /* DisplayFormViewController.swift */; };
+		A0651E4B2A050152009FAAEB /* ViewForText.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0651E4A2A050152009FAAEB /* ViewForText.swift */; };
+		A0651E4D2A050161009FAAEB /* ViewForImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0651E4C2A050161009FAAEB /* ViewForImage.swift */; };
+		A0651E4F2A050178009FAAEB /* ViewForDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0651E4E2A050178009FAAEB /* ViewForDate.swift */; };
 		A082CB2D2A03BCFB004E939A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A082CB2C2A03BCFB004E939A /* AppDelegate.swift */; };
 		A082CB2F2A03BCFB004E939A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A082CB2E2A03BCFB004E939A /* SceneDelegate.swift */; };
 		A082CB312A03BCFB004E939A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A082CB302A03BCFB004E939A /* ViewController.swift */; };
@@ -39,6 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A0651E3F2A04B862009FAAEB /* FormTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTableViewCell.swift; sourceTree = "<group>"; };
+		A0651E442A04C161009FAAEB /* DisplayFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayFormViewController.swift; sourceTree = "<group>"; };
+		A0651E4A2A050152009FAAEB /* ViewForText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewForText.swift; sourceTree = "<group>"; };
+		A0651E4C2A050161009FAAEB /* ViewForImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewForImage.swift; sourceTree = "<group>"; };
+		A0651E4E2A050178009FAAEB /* ViewForDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewForDate.swift; sourceTree = "<group>"; };
 		A082CB292A03BCFB004E939A /* DynamicFormPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicFormPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A082CB2C2A03BCFB004E939A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A082CB2E2A03BCFB004E939A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +92,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A0651E412A04B867009FAAEB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A082CB302A03BCFB004E939A /* ViewController.swift */,
+				A0E7A6152A03E5C200B58CEA /* CreateFormViewController.swift */,
+				A082CB5C2A03C03B004E939A /* SecondViewController.swift */,
+				A0651E442A04C161009FAAEB /* DisplayFormViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A0651E422A04B86F009FAAEB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A0651E3F2A04B862009FAAEB /* FormTableViewCell.swift */,
+				A0651E4A2A050152009FAAEB /* ViewForText.swift */,
+				A0651E4C2A050161009FAAEB /* ViewForImage.swift */,
+				A0651E4E2A050178009FAAEB /* ViewForDate.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A0651E432A04B876009FAAEB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		A082CB202A03BCFB004E939A = {
 			isa = PBXGroup;
 			children = (
@@ -105,16 +144,16 @@
 		A082CB2B2A03BCFB004E939A /* DynamicFormPractice */ = {
 			isa = PBXGroup;
 			children = (
+				A0651E432A04B876009FAAEB /* Model */,
+				A0651E422A04B86F009FAAEB /* View */,
+				A0651E412A04B867009FAAEB /* Controller */,
 				A082CB2C2A03BCFB004E939A /* AppDelegate.swift */,
 				A082CB2E2A03BCFB004E939A /* SceneDelegate.swift */,
-				A082CB302A03BCFB004E939A /* ViewController.swift */,
 				A082CB322A03BCFB004E939A /* Main.storyboard */,
 				A082CB352A03BD02004E939A /* Assets.xcassets */,
 				A082CB372A03BD02004E939A /* LaunchScreen.storyboard */,
 				A082CB3A2A03BD02004E939A /* Info.plist */,
-				A082CB5C2A03C03B004E939A /* SecondViewController.swift */,
 				A0F33F4E2A03C75E00109F0C /* AppConstant.swift */,
-				A0E7A6152A03E5C200B58CEA /* CreateFormViewController.swift */,
 			);
 			path = DynamicFormPractice;
 			sourceTree = "<group>";
@@ -267,12 +306,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0651E4F2A050178009FAAEB /* ViewForDate.swift in Sources */,
 				A0E7A6162A03E5C200B58CEA /* CreateFormViewController.swift in Sources */,
 				A082CB5D2A03C03B004E939A /* SecondViewController.swift in Sources */,
+				A0651E4D2A050161009FAAEB /* ViewForImage.swift in Sources */,
 				A0F33F4F2A03C75E00109F0C /* AppConstant.swift in Sources */,
+				A0651E452A04C161009FAAEB /* DisplayFormViewController.swift in Sources */,
 				A082CB312A03BCFB004E939A /* ViewController.swift in Sources */,
 				A082CB2D2A03BCFB004E939A /* AppDelegate.swift in Sources */,
 				A082CB2F2A03BCFB004E939A /* SceneDelegate.swift in Sources */,
+				A0651E4B2A050152009FAAEB /* ViewForText.swift in Sources */,
+				A0651E402A04B862009FAAEB /* FormTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
